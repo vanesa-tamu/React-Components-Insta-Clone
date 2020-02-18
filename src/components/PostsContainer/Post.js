@@ -27,10 +27,13 @@ const Post = props => {
         />
       </div>
       <LikeSection like={like} updateLike={() => setLike(like + 1)}/>
+    
       <CommentSection
         postId={props.post.imageUrl}
         comments={props.post.comments}
+        timestamp={props.post.timestamp}
       />
+
     </div>
   );
 };

@@ -7,6 +7,7 @@ import "./Comment.css";
 const CommentSection = props => {
   // Add state for the comments
   const [c, setComment] = useState(props.comments)
+  const {timestamp} = props
   console.log('comment state', c)
   return (
     <div>
@@ -14,7 +15,7 @@ const CommentSection = props => {
      {c.map((comm, index) => { 
         return <Comment key={index} comment={comm}/>
       })}
-      
+      {timestamp}
       <CommentInput /> 
     </div>
   );
