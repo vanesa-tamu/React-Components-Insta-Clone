@@ -6,13 +6,20 @@ import "./Comment.css";
 
 const CommentSection = props => {
   // Add state for the comments
-
+  const [c, setComment] = useState(props.comments)
+  console.log('comment state', c)
   return (
     <div>
       {/* map through the comments data and return the Comment component */}
-      <CommentInput />
+     {c.map((comm, index) => { 
+        return <Comment key={index} comment={comm}/>
+      })}
+      
+      <CommentInput /> 
     </div>
   );
 };
 
 export default CommentSection;
+
+//changeComment= {() =>setComment(event.taget.value)}
