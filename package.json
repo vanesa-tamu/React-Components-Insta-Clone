@@ -16,5 +16,8 @@
     "eject": "react-scripts eject"
   },
   "keywords": [],
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "styled-components": "^5.0.1"
+  }
 }
