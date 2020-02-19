@@ -4,6 +4,19 @@ import CommentInput from "./CommentInput";
 import Comment from "./Comment";
 import "./Comment.css";
 
+import styled from 'styled-components';
+
+const TimeStamp = styled.div`
+max-width: 600px;
+width: 100%;
+display: flex;
+justify-content: flex-start;
+font-size: 0.7rem;
+color: grey;
+padding: 5px;
+`;
+
+
 const CommentSection = props => {
   // Add state for the comments
   const [c, setComment] = useState(props.comments)
@@ -15,7 +28,8 @@ const CommentSection = props => {
      {c.map((comm, index) => { 
         return <Comment key={index} comment={comm}/>
       })}
-      {timestamp}
+      {/* {timestamp} */}
+      <TimeStamp>{timestamp}</TimeStamp>
       <CommentInput /> 
     </div>
   );
@@ -24,3 +38,5 @@ const CommentSection = props => {
 export default CommentSection;
 
 //changeComment= {() =>setComment(event.taget.value)}
+//flex-flow: column;
+//border: 1px solid red;
